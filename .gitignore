@@ -1,0 +1,5 @@
+/.pytest_cache/
+/hogwarts/
+/venv/
+/unit/.pytest_cache/
+/allure_results/

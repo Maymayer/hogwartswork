@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="5" hostname="mibinger-PC" name="pytest" skipped="0" tests="10" time="0.327" timestamp="2019-12-22T17:30:50.530749"><testcase classname="unit.test_demo.TestDemo" file="unit\test_demo.py" line="32" name="test_demo" time="0.039"><failure message="AssertionError: False is not true">self = &lt;unit.test_demo.TestDemo testMethod=test_demo&gt;
+
+    def test_demo(self):
+&gt;       self.assertTrue(False)
+E       AssertionError: False is not true
+
+unit\test_demo.py:34: AssertionError</failure><system-out>setupclass
+setup
+teardown
+</system-out></testcase><testcase classname="unit.test_demo.TestDemo" file="unit\test_demo.py" line="27" name="test_sum" time="0.002"><system-out>setup
+3
+teardown
+teardownclass
+</system-out></testcase><testcase classname="unit.test_div" file="unit\test_div.py" line="3" name="test_div1" time="0.001"></testcase><testcase classname="unit.test_div" file="unit\test_div.py" line="14" name="test_div_int" time="0.001"></testcase><testcase classname="unit.test_div" file="unit\test_div.py" line="20" name="test_div_float" time="0.001"><failure message="assert 50.99999999999999 == 51
+ +  where 50.99999999999999 = div(10.2, 0.2)">def test_div_float():
+        assert div(12, 5) == 2.4
+        assert div(12.3, 0.2) == 61.5
+&gt;       assert div(10.2, 0.2) == 51
+E       assert 50.99999999999999 == 51
+E        +  where 50.99999999999999 = div(10.2, 0.2)
+
+unit\test_div.py:24: AssertionError</failure></testcase><testcase classname="unit.test_div" file="unit\test_div.py" line="27" name="test_div_exception" time="0.002"><failure message="TypeError: unsupported operand type(s) for /: &apos;int&apos; and &apos;str&apos;">def test_div_exception():
+&gt;       assert div(10, &apos;a&apos;)
+
+unit\test_div.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = 10, b = &apos;a&apos;
+
+    def div(a, b):
+&gt;       return a / b
+E       TypeError: unsupported operand type(s) for /: &apos;int&apos; and &apos;str&apos;
+
+unit\div.py:2: TypeError</failure></testcase><testcase classname="unit.test_div" file="unit\test_div.py" line="32" name="test_div_zero" time="0.000"><failure message="ZeroDivisionError: division by zero">def test_div_zero():
+&gt;       assert div(12, 0) is None
+
+unit\test_div.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = 12, b = 0
+
+    def div(a, b):
+&gt;       return a / b
+E       ZeroDivisionError: division by zero
+
+unit\div.py:2: ZeroDivisionError</failure></testcase><testcase classname="unit.test_pytest" file="unit\test_pytest.py" line="7" name="test_answer" time="0.001"><system-out>setup function
+</system-out></testcase><testcase classname="unit.test_pytest.TestClass" file="unit\test_pytest.py" line="27" name="test_one" time="0.002"><system-out>setup class
+setup
+</system-out></testcase><testcase classname="unit.test_pytest.TestClass" file="unit\test_pytest.py" line="31" name="test_two" time="0.003"><failure message="AssertionError: assert False
+ +  where False = hasattr(&apos;hello&apos;, &apos;checkr&apos;)">self = &lt;unit.test_pytest.TestClass object at 0x00000196C34B17C0&gt;
+
+    def test_two(self):
+        x = &quot;hello&quot;
+&gt;       assert hasattr(x, &quot;checkr&quot;)
+E       AssertionError: assert False
+E        +  where False = hasattr(&apos;hello&apos;, &apos;checkr&apos;)
+
+unit\test_pytest.py:34: AssertionError</failure><system-out>setup
+</system-out></testcase></testsuite></testsuites>

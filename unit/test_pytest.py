@@ -18,7 +18,9 @@ def setup_function():
 
 
 class TestClass:
-    def setup(self):
+
+    @classmethod
+    def setup(cls):
         print("setup")
 
     @classmethod
@@ -32,3 +34,7 @@ class TestClass:
     def test_two(self):
         x = "hello"
         assert hasattr(x, "checkr")
+
+    def test_zero_division(self):
+        with pytest.raises(ZeroDivisionError):
+            1 / 0

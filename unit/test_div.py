@@ -15,17 +15,6 @@ def test_div1():
 
 
 @pytest.mark.happy
-@pytest.mark.parametrize("num1, num2, exception_num", {
-    (10, 2, 5),
-    (12, 3, 4),
-    (1000000, 1, 1000000)
-})
-@pytest.mark.happy
-def test_div_int_param(num1, num2, exception_num):
-    assert div(num1, num2) == exception_num
-
-
-@pytest.mark.happy
 def test_div_int():
     assert div(10, 2) == 5
     assert div(12, 3) == 4
@@ -49,3 +38,4 @@ def test_div_exception():
 @pytest.mark.exception
 def test_div_zero():
     assert div(12, 0) is None
+

@@ -19,6 +19,7 @@ def test_div_int_param(num1, num2, exception_num):
     (12.3, 0.2, 61.5),
     (10.2, 0.2, 51),
     (11, 0.2, 55),
+    (13.1, 2, 6.55),
     (10, 3, 3.333333)
 })
 def test_div_float(num1, num2, exception_num):

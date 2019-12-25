@@ -29,7 +29,8 @@ def test_div_float(num1, num2, exception_num):
 @pytest.mark.exception
 @pytest.mark.parametrize("num1, num2", {
     (10, 'a'),
-    ('abc', 10)
+    ('abc', 10),
+    ('bbb', 'ccc')
 })
 def test_div_exception(num1, num2):
     assert div(num1, num2)

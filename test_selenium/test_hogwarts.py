@@ -19,6 +19,8 @@ class TestHogwarts:
         # sleep(1)
         # todo: 显式等待
         element = (By.PARTIAL_LINK_TEXT, '霍格沃兹测试学院')
+        self.driver.set_window_size(1222, 823)
+        self.driver.save_screenshot("1.png")
         self.wait(10, expected_conditions.element_to_be_clickable(element))
         # WebDriverWait(self.driver, 10).until(expected_conditions.element_to_be_clickable(element))
         self.driver.find_element(*element).click()

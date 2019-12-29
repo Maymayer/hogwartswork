@@ -43,6 +43,15 @@ class TestHogwarts:
         self.wait(10, expected_conditions.element_to_be_clickable(element3))
         self.driver.find_element(*element3).click()
 
+    def test_js(self):
+        for code in [
+            "return document.title",
+            "return document.querySelector('.active').className",
+            "return JSON.stringify(performance.timing)"
+        ]:
+            result = self.driver.execute_script(code)
+            print(result)
+
     def teardown_method(self):
         sleep(5)
         self.driver.quit()

@@ -1,0 +1,4 @@
+username	english_name	acctid	sex	phone	telephone	mail	address	group	title	position extern_position	auto_send_invite
+小宝	Nao	no0001	男	12312341234		一号大街1号	小闹闹关爱协会	总裁	上级	同步	否
+小红		no2001	女	12312342222	0102222222	朱雀大街4弄31号	后勤部	采买员	普通成员	同步	否
+小明		no3001	男	12312222224				生产部	程序员	普通成员	高级工程师	是			

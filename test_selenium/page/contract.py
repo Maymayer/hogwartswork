@@ -10,7 +10,8 @@ class Contract:
         return self
 
     def add_member_error(self, data):
-        return AddMemberPage()
+        pass
+        # return AddMemberPage()
 
     def search(self, data):
         pass

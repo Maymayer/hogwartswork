@@ -1,12 +1,24 @@
-from test_selenium.page.contract import Contract
+from selenium.webdriver.common.by import By
+
+from test_selenium.page.contact import Contact
+
+from test_selenium.page.base_page import BasePage
+from test_selenium.page.message import Message
 
 
-class Main:
+class Main(BasePage):
+    _base_url = "https://work.weixin.qq.com/wework_admin/frame#index"
+
     def download(self):
         pass
 
-    def import_users(self):
-        pass
+    def import_users(self, path):
+        self.find((By.PARTIAL_LINK_TEXT, "导入成员")).click()
+        self.find((By.LINK_TEXT, "批量导入")).click()
+        self.find((By.ID, "js_upload_file_input")).send_keys(path)
+        self.find((By.ID, "submit_csv")).click()
+        self.find((By.ID, "reloadContact")).click()
+        return self
 
     def goto_app(self):
         pass
@@ -18,4 +30,12 @@ class Main:
         return ["aaa", "bbbbb"]
 
     def add_member(self):
-        return Contract()
+        locator = (By.LINK_TEXT, "添加成员")
+        # self.find((By.LINK_TEXT, "添加成员")).click()
+        self._driver.execute_script("arguments[0].click();", self.find(locator))
+        return Contact(reuse=True)
+
+    def send_message(self):
+        locator = (By.LINK_TEXT, '消息群发')
+        self.find(locator).click()
+        return Message(reuse=True)
